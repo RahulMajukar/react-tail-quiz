@@ -46,7 +46,7 @@ export const DataProvider = ({ children }) => {
         event.target.classList.add('bg-success');
         setMarks(marks + 5);
       } else {
-        event.target.classList.add('bg-danger');
+        event.target.classList.add('bg-red-600');
       }
     }
   }
@@ -55,8 +55,8 @@ export const DataProvider = ({ children }) => {
   const nextQuestion = () => {
     setCorrectAnswer('');
     setSelectedAnswer('');
-    const wrongBtn = document.querySelector('button.bg-danger');
-    wrongBtn?.classList.remove('bg-danger');
+    const wrongBtn = document.querySelector('button.bg-red-600');
+    wrongBtn?.classList.remove('bg-red-600');
     const rightBtn = document.querySelector('button.bg-success');
     rightBtn?.classList.remove('bg-success');
     setQuestionIndex(questionIndex + 1);
@@ -78,8 +78,8 @@ export const DataProvider = ({ children }) => {
     setSelectedAnswer('');
     setQuestionIndex(0);
     setMarks(0);
-    const wrongBtn = document.querySelector('button.bg-danger');
-    wrongBtn?.classList.remove('bg-danger');
+    const wrongBtn = document.querySelector('button.bg-red-600');
+    wrongBtn?.classList.remove('bg-red-600');
     const rightBtn = document.querySelector('button.bg-success');
     rightBtn?.classList.remove('bg-success');
   }
